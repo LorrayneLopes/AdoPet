@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="content d-flex justify-content-center flex-nowrap">
+    <div class="content__image">
+      <img src="assets/images/login-banner.png" alt="Login banner" />
+    </div>
+
+    <div class="content__form d-flex flex-column align-items-center gap-5">
+      <h1 class="text-center m-0">Login</h1>
+
+      <form
+        class="d-flex align-items-center justify-content-center flex-column"
+        [formGroup]="form"
+      >
+        <div class="mb-3 form__section">
+          <label for="email" class="form-label">Email</label>
+          <input
+            class="form-control"
+            type="email"
+            id="email"
+            placeholder="Digite seu email"
+            autocomplete="on"
+            [formControlName]="formKeys.email"
+          />
+          <small>{{ getErrorMessage(form, formKeys.email) }}</small>
+        </div>
+
+        <div class="mb-3 form__section">
+          <label for="password" class="form-label">Senha</label>
+          <input
+            class="form-control"
+            type="password"
+            id="password"
+            autocomplete="off"
+            placeholder="Digite sua senha"
+            [formControlName]="formKeys.password"
+          />
+          <small>{{ getErrorMessage(form, formKeys.password) }}</small>
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-secondary w-100 mt-4"
+          [disabled]="form.invalid"
+          (click)="onSubmit()"
+        >
+          Entrar
+        </button>
+      </form>
+
+      <div class="text-center">
+        <img src="assets/images/logo-secondary.png" alt="logo" />
+      </div>
+    </div>
+  </div>
+</div>

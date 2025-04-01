@@ -1,0 +1,18 @@
+.animal-badge {
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 912px) {
+  .animal-badge {
+    font-size: 0.875rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .animal-badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+}

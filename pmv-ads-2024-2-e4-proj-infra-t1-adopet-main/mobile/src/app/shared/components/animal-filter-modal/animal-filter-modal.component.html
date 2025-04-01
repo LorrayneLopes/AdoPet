@@ -1,0 +1,51 @@
+<ion-modal (didDismiss)="onCancel()" class="modal__wrapper">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="modal__title">Pesquisar por:</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="onCancel()" class="close-button">×</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <form [formGroup]="form" class="p-2">
+      <div class="form-container__content d-flex gap-3 flex-column">
+        <div class="form-group">
+          <ion-label>Idade</ion-label>
+          <ion-input
+            formControlName="Age"
+            type="number"
+            placeholder="Digite a idade do pet"
+          ></ion-input>
+        </div>
+        <div class="form-group">
+          <ion-label>Cidade</ion-label>
+          <ion-input
+            formControlName="City"
+            placeholder="Digite a cidade onde procura o pet"
+          ></ion-input>
+        </div>
+        <div class="form-group">
+          <ion-label>Estado</ion-label>
+          <ion-input
+            formControlName="State"
+            type="text"
+            placeholder="Digite o estado do pet"
+          ></ion-input>
+        </div>
+        <div class="form-group">
+          <ion-label>Espécie</ion-label>
+          <ion-input
+            formControlName="Specie"
+            type="text"
+            placeholder="Digite a espécie do pet"
+          ></ion-input>
+        </div>
+        <div class="form-group mt-4">
+          <ion-button expand="block" (click)="onSubmit()"> Filtrar </ion-button>
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal>

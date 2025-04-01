@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="content-wrapper d-flex">
+    <div class="image-section w-100"></div>
+
+    <div class="form-section">
+      <app-generic-user-form
+        [userId]="userId"
+        (formSubmit)="onSubmit($event)"
+      ></app-generic-user-form>
+    </div>
+  </div>
+</div>

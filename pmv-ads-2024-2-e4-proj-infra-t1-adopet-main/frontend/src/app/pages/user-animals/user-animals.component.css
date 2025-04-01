@@ -1,0 +1,184 @@
+.user-profile {
+  padding: 1.25rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 0.0625rem 0.25rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.user-info__photo {
+  width: 7.5rem;
+  height: 7.5rem;
+  object-fit: cover;
+}
+
+.user-info__name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.user-info__location,
+.user-info__share {
+  color: #808080;
+}
+
+.user-info__share {
+  cursor: pointer;
+}
+
+.user-info__share-icon {
+  font-size: 1.25rem;
+  color: #0cbe0c;
+}
+
+.user-info__stats p {
+  margin: 0;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.user-info__bio {
+  font-style: italic;
+  color: gray;
+}
+
+.container {
+  margin-bottom: 1rem;
+}
+
+.animals-container {
+  box-shadow: rgba(0, 0, 0, 0.16) 0 0.0625rem 0.25rem;
+}
+
+.container__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.animal-card {
+  background-color: var(--bg-gray);
+  transition: all 0.1s;
+}
+
+.animal-card:hover {
+  transform: scale(1.01);
+  box-shadow: rgba(0, 0, 0, 0.16) 0 0.0625rem 0.25rem;
+}
+
+.animal-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.animal-card__actions button:hover {
+  transform: scale(1.1);
+  transition: all 0.1s;
+}
+
+.animal-list {
+  max-height: 50vh;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0.625rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 0.75rem;
+  border: 0.125rem solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.no-animals-container {
+  background-color: var(--bg-gray);
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0.0625rem 0.25rem;
+}
+
+.no-animals-container h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.no-animals-container p {
+  font-size: 1rem;
+  color: #606060;
+}
+
+@media (max-width: 768px) {
+  .user-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .user-info__photo {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  .user-info__name {
+    font-size: 1.5rem;
+  }
+
+  .user-info__stats {
+    font-size: 1.25rem;
+  }
+
+  .animal-card {
+    flex-direction: column;
+  }
+
+  .animal-card__title {
+    font-size: 1.125rem;
+  }
+
+  .animal-card__actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-info__name {
+    font-size: 1.25rem;
+  }
+
+  .user-info__location,
+  .user-info__share {
+    font-size: 0.875rem;
+  }
+
+  .container__title {
+    font-size: 1.25rem;
+  }
+
+  .user-profile,
+  .animals-container {
+    padding: 1rem;
+  }
+
+  .animal-card {
+    padding: 1rem;
+  }
+}

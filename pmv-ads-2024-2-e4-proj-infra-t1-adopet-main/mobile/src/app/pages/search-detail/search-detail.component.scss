@@ -1,0 +1,108 @@
+.container {
+  width: 100%;
+  max-width: 65rem;
+  padding: 0 1rem;
+}
+
+.animal-card {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 10px;
+}
+
+.animal-card__section--image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.animal-card__section--sub-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Imagens secundárias menores e lado a lado */
+.animal-card__section--sub-image {
+  width: 100%;
+  height: auto;
+  max-width: 6rem;
+  margin-right: 1rem;
+}
+
+.animal-card__content {
+  padding: 1.5rem;
+}
+
+.animal-card__subtitle {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+}
+
+.animal-card__contact-btn {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.more-animals__title {
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+ion-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* Alinhando textos à esquerda */
+.animal-card__section--details,
+.animal-card__section--info {
+  text-align: left;
+}
+
+.animal-card__location,
+.animal-card__tutor {
+  display: flex;
+  align-items: center;
+}
+
+.animal-card__location ion-icon,
+.animal-card__tutor ion-icon {
+  margin-right: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 912px) {
+  .animal-card__subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .animal-card__section--image {
+    max-width: 20rem;
+  }
+
+  .animal-card__subtitle {
+    font-size: 1.25rem;
+  }
+
+  .animal-card__section--sub-image {
+    max-width: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .animal-card__section--image {
+    max-width: 15rem;
+  }
+
+  .animal-card__subtitle {
+    font-size: 1rem;
+  }
+
+  .animal-card__contact-btn {
+    max-width: 15rem;
+  }
+}

@@ -1,0 +1,9 @@
+<div *ngIf="showNotification" class="notification-overlay">
+  <div class="notification-box">
+    <p>Adicionar o adopet à sua tela inicial?</p>
+    <div class="button-group">
+      <button (click)="installApp()">Sim, adicionar</button>
+      <button (click)="closeNotification()">Não, obrigado</button>
+    </div>
+  </div>
+</div>

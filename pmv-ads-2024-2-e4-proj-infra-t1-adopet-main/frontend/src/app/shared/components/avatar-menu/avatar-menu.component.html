@@ -1,0 +1,32 @@
+<div class="avatar-menu">
+  <nz-avatar
+    nz-dropdown
+    nzSrc="assets/images/user-placeholder.png"
+    [nzSize]="44"
+    [nzDropdownMenu]="menu"
+  ></nz-avatar>
+
+  <nz-dropdown-menu #menu="nzDropdownMenu">
+    <ul nz-menu>
+      <li
+        nz-menu-item
+        class="d-flex align-items-center"
+        (click)="redirectToAnimalCreation()"
+      >
+        <i nz-icon nzType="user"></i> Cadastrar novo animal
+      </li>
+      <li nz-menu-item (click)="redirectToMyAnimals()">
+        <i nz-icon nzType="user"></i> Meu perfil / animais
+      </li>
+      <li nz-menu-item (click)="redirectToEditProfile()">
+        <i nz-icon nzType="user"></i> Editar perfil
+      </li>
+      <li nz-menu-item (click)="redirectToPasswordEdition()">
+        <i nz-icon nzType="user"></i> Alterar senha
+      </li>
+      <li nz-menu-item (click)="logout()">
+        <i nz-icon nzType="logout"></i> Sair
+      </li>
+    </ul>
+  </nz-dropdown-menu>
+</div>

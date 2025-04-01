@@ -1,0 +1,148 @@
+<div class="container">
+  <h3 class="text-center container__title">
+    {{ userId ? "Editar perfil" : "Novo usuário? Adicione suas informações" }}
+  </h3>
+  <form
+    class="d-flex flex-column"
+    [formGroup]="userForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="form-row row">
+      <div class="form-group col-md-6">
+        <label>Nome*</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="name"
+          placeholder="Seu nome..."
+        />
+        <small class="text-danger">{{
+          getErrorMessage(userForm, "name")
+        }}</small>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label>Sobrenome*</label>
+        <input
+          type="text"
+          formControlName="surname"
+          class="form-control"
+          placeholder="Informe o seu sobrenome..."
+        />
+        <small class="text-danger">{{
+          getErrorMessage(userForm, "surname")
+        }}</small>
+      </div>
+    </div>
+
+    <div class="form-row row">
+      <div class="form-group col-6">
+        <label>Email*</label>
+        <input
+          type="email"
+          formControlName="email"
+          class="form-control"
+          placeholder="Seu melhor email"
+        />
+        <small class="text-danger">{{
+          getErrorMessage(userForm, "email")
+        }}</small>
+      </div>
+
+      <div class="form-group col-6">
+        <label>Contato*</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="contact"
+          placeholder="Telefone para contato..."
+        />
+        <small class="text-danger">{{
+          getErrorMessage(userForm, "contact")
+        }}</small>
+      </div>
+    </div>
+
+    <ng-container *ngIf="!userId">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Senha*</label>
+          <input
+            type="password"
+            class="form-control"
+            formControlName="password"
+            placeholder="Sua senha..."
+            [autocomplete]="false"
+          />
+          <small class="text-danger">{{
+            getErrorMessage(userForm, "password")
+          }}</small>
+        </div>
+
+        <div class="form-group">
+          <label>Confirmar senha*</label>
+          <input
+            type="password"
+            formControlName="confirmPassword"
+            class="form-control"
+            placeholder="Confirme sua senha..."
+            [autocomplete]="false"
+          />
+          <small class="text-danger">{{
+            getErrorMessage(userForm, "confirmPassword")
+          }}</small>
+        </div>
+      </div>
+    </ng-container>
+
+    <div class="form-row row" formGroupName="address">
+      <div class="form-group col-md-6">
+        <label>Estado*</label>
+        <select formControlName="state" class="form-control">
+          <option value="" disabled selected>Selecione seu estado</option>
+          <option value="Bahia">Bahia</option>
+          <option value="São Paulo">São Paulo</option>
+          <option value="Rio de Janeiro">Rio de Janeiro</option>
+          <option value="Minas Gerais">Minas Gerais</option>
+        </select>
+        <small class="text-danger">{{
+          getErrorMessage(userForm, "state")
+        }}</small>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label>Cidade*</label>
+        <select formControlName="city" class="form-control">
+          <option value="" disabled selected>Selecione sua cidade</option>
+          <option value="Salvador">Salvador</option>
+          <option value="São Paulo">São Paulo</option>
+          <option value="Rio de Janeiro">Rio de Janeiro</option>
+          <option value="Contagem">Contagem</option>
+        </select>
+        <small class="text-danger">{{
+          getErrorMessage(userForm, "city")
+        }}</small>
+      </div>
+
+      <div class="form-group">
+        <label>Sobre*</label>
+        <textarea
+          formControlName="about"
+          class="form-control"
+          placeholder="Há mais alguma informação relevante que devamos saber? :)"
+        ></textarea>
+      </div>
+      <small class="text-danger">{{
+        getErrorMessage(userForm, "state")
+      }}</small>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-secondary"
+      [disabled]="!userForm.valid"
+    >
+      {{ userId ? "Salvar alterações" : "Cadastrar" }}
+    </button>
+  </form>
+</div>

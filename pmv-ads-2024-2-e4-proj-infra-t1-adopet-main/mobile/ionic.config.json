@@ -1,0 +1,8 @@
+{
+  "name": "adopet",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "33dab5ab"
+}

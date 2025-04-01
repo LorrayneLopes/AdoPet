@@ -1,0 +1,67 @@
+<ion-content>
+  <div class="container p-2">
+    <ion-card *ngIf="animal">
+      <ion-card-header>
+        <ion-card-title class="text-center">{{ animal.name }}</ion-card-title>
+        <ion-card-subtitle class="text-center">{{
+          getAnimalResume()
+        }}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-row class="ion-justify-content-center ion-align-items-center">
+          <ion-col size="12" size-md="6">
+            <ion-img
+              [src]="getImageUrl(animal.image)"
+              class="animal-card__section--image"
+            ></ion-img>
+          </ion-col>
+
+          <ion-col size="12" size-md="6">
+            <ion-row class="ion-justify-content-start">
+              <ion-col size="4" *ngFor="let subImage of animal.image">
+                <ion-img
+                  [src]="subImage"
+                  class="animal-card__section--sub-image"
+                ></ion-img>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+
+        <div class="animal-card__content p-3">
+          <div class="animal-card__section animal-card__section--details">
+            <h2 class="animal-card__subtitle">Detalhes</h2>
+            <app-badges-list [badges]="getAnimalBadges()"></app-badges-list>
+          </div>
+
+          <!-- Informações adicionais -->
+          <div class="animal-card__section--info mt-5">
+            <div class="animal-card__location ion-padding-horizontal">
+              <ion-icon name="pin" slot="start"></ion-icon>
+              <p class="m-0">Localizado em Belo Horizonte, Minas Gerais</p>
+            </div>
+            <div class="animal-card__tutor ion-padding-horizontal mt-2">
+              <ion-icon name="person" slot="start"></ion-icon>
+              <p class="m-0">Tutor: Matheus Rocha</p>
+            </div>
+
+            <ion-button
+              class="animal-card__contact-btn w-100 ion-margin-top"
+              (click)="handleClick()"
+              expand="block"
+              color="secondary"
+            >
+              Entrar em contato
+            </ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <div class="more-animals mt-5" *ngIf="animal">
+      <h5 class="more-animals__title">Outros animais para adoção</h5>
+      <app-animal-list [animals]="animalsSignal()"></app-animal-list>
+    </div>
+  </div>
+</ion-content>

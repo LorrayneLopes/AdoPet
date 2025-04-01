@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="user-profile container p-4 bg-white mt-4 rounded">
+    <div class="user-info d-flex align-items-center">
+      <img
+        src="assets/images/user-placeholder.png"
+        alt="Foto do usuário"
+        class="user-info__photo rounded-circle me-4"
+      />
+      <div class="user-info__details">
+        <div class="d-flex align-items-center">
+          <h2 class="user-info__name me-2">{{ formatUsername(user) }}</h2>
+        </div>
+        <p class="user-info__location d-flex align-items-center gap-2">
+          <span
+            ><img src="assets/icons/house.png" width="24" height="24"
+          /></span>
+          {{ user?.address?.city + ", " + user?.address?.state }}
+        </p>
+        <p
+          class="user-info__share d-flex align-items-center gap-2"
+          (click)="copyProfileLink()"
+        >
+          <i class="fas fa-share-alt user-info__share-icon"></i>
+          Compartilhar perfil
+        </p>
+        <div class="user-info__stats d-flex mt-2">
+          <p class="me-4"><strong>X</strong> Animais divulgados</p>
+          <p><strong>Y</strong> Animais adotados</p>
+        </div>
+        <p class="user-info__bio mt-2">
+          {{ user?.about }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div
+    *ngIf="animals().length"
+    class="container p-md-4 bg-white mt-4 rounded animals-container"
+  >
+    <h1 class="container__title mb-4">Animais cadastrados</h1>
+
+    <ul class="animal-list list-unstyled d-flex flex-column gap-4 px-3">
+      <li
+        *ngFor="let animal of animals()"
+        class="animal-card p-2 rounded d-flex justify-content-between align-items-center"
+      >
+        <div class="animal-card__content">
+          <h2 class="animal-card__title">{{ animal.name }}</h2>
+          <p class="animal-card__description">
+            {{ formatAnimalDescription(animal) }}
+          </p>
+          <p>Cadastrado em: {{ date.toLocaleString() }}</p>
+        </div>
+        <div class="animal-card__actions d-flex gap-2">
+          <button
+            *ngFor="let action of actions"
+            class="border-0 bg-transparent"
+            [title]="action.label"
+            [ngStyle]="{
+              display: action.canShow(animal) ? 'block' : 'none'
+            }"
+            (click)="action.action(animal)"
+          >
+            <img [src]="action.icon" width="24" height="24" />
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="!animals().length" class="container p-4 bg-white mt-4 rounded">
+    <h1 class="container__title mb-4">Nenhum animal cadastrado</h1>
+    <p>Você ainda não cadastrou nenhum animal. Comece a adicionar!</p>
+  </div>
+</div>

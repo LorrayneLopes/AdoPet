@@ -1,0 +1,54 @@
+<ion-content>
+  <div class="container">
+    <div class="content">
+      <div class="content__image">
+        <img src="assets/images/login-banner.png" alt="Login banner" />
+      </div>
+
+      <div class="content__form">
+        <ion-text class="ion-text-center">
+          <h1>Login</h1>
+        </ion-text>
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <ion-item class="form__section">
+            <ion-label position="stacked">Email</ion-label>
+            <ion-input
+              type="email"
+              placeholder="Digite seu email"
+              [formControlName]="formKeys.email"
+            ></ion-input>
+          </ion-item>
+          <ion-text color="danger">
+            <small>{{ getErrorMessage(form, formKeys.email) }}</small>
+          </ion-text>
+
+          <ion-item class="form__section">
+            <ion-label position="stacked">Senha</ion-label>
+            <ion-input
+              type="password"
+              placeholder="Digite sua senha"
+              [formControlName]="formKeys.password"
+            ></ion-input>
+          </ion-item>
+          <ion-text color="danger">
+            <small>{{ getErrorMessage(form, formKeys.password) }}</small>
+          </ion-text>
+
+          <ion-button
+            expand="block"
+            type="submit"
+            [disabled]="form.invalid"
+            class="mt-4"
+          >
+            Entrar
+          </ion-button>
+        </form>
+
+        <ion-text class="ion-text-center">
+          <img src="assets/images/logo-secondary.png" alt="Logo" />
+        </ion-text>
+      </div>
+    </div>
+  </div>
+</ion-content>

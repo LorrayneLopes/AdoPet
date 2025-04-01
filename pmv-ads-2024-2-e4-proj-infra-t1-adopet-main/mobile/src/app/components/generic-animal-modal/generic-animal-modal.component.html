@@ -1,0 +1,239 @@
+<form [formGroup]="petForm" class="form-container">
+  <div class="form-container__header">
+    <h2>
+      {{
+        animal
+          ? "Editar informações da(o) " + animal.name
+          : "Cadastre um novo peludo para adoção"
+      }}
+    </h2>
+  </div>
+
+  <div class="form-container__content">
+    <div class="form-row">
+      <div class="form-group align-items-start">
+        <label>Nome (apelido):</label>
+        <input
+          formControlName="name"
+          type="text"
+          class="form-control"
+          placeholder="Digite o nome ou apelido do pet"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('name') }"
+          required
+        />
+        <div *ngIf="isFieldInvalid('name')" class="invalid-feedback">
+          Nome é obrigatório.
+        </div>
+      </div>
+      <div class="form-group align-items-start">
+        <label>Idade:</label>
+        <input
+          formControlName="age"
+          type="number"
+          class="form-control"
+          placeholder="Digite a idade do pet"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('age') }"
+          required
+        />
+        <div *ngIf="isFieldInvalid('age')" class="invalid-feedback">
+          Idade é obrigatória.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row" formGroupName="address">
+      <div class="form-group align-items-start">
+        <label for="state">Estado:</label>
+        <input
+          type="text"
+          id="state"
+          formControlName="state"
+          class="form-control"
+          placeholder="Digite o estado"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('address.state') }"
+          required
+        />
+        <div *ngIf="isFieldInvalid('address.state')" class="invalid-feedback">
+          Estado é obrigatório.
+        </div>
+      </div>
+      <div class="form-group align-items-start">
+        <label for="city">Cidade:</label>
+        <input
+          type="text"
+          id="city"
+          formControlName="city"
+          class="form-control"
+          placeholder="Digite a cidade"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('address.city') }"
+          required
+        />
+        <div *ngIf="isFieldInvalid('address.city')" class="invalid-feedback">
+          Cidade é obrigatória.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group align-items-start">
+        <label>Cuidados veterinários:</label>
+        <select
+          formControlName="veterinaryCare"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('veterinaryCare') }"
+          required
+        >
+          <option value="" disabled selected>
+            Selecione os cuidados veterinários
+          </option>
+          <option *ngFor="let option of veterinaryCareOptions" [value]="option">
+            {{ option }}
+          </option>
+        </select>
+        <div *ngIf="isFieldInvalid('veterinaryCare')" class="invalid-feedback">
+          Seleção de cuidados veterinários é obrigatória.
+        </div>
+      </div>
+
+      <div class="form-group align-items-start">
+        <label>Espécie:</label>
+        <select
+          formControlName="specie"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('veterinaryCare') }"
+          required
+        >
+          <option value="" disabled selected>Selecione a espécie do pet</option>
+          <option *ngFor="let option of specieOptions" [value]="option">
+            {{ option }}
+          </option>
+        </select>
+        <div *ngIf="isFieldInvalid('specie')" class="invalid-feedback">
+          Espécie é obrigatória.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group align-items-start">
+        <label>Gênero:</label>
+        <select
+          formControlName="gender"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('veterinaryCare') }"
+          required
+        >
+          <option value="" disabled selected>
+            Selecione o gênero do animal
+          </option>
+          <option *ngFor="let option of genderOptions" [value]="option">
+            {{ option }}
+          </option>
+        </select>
+        <div *ngIf="isFieldInvalid('gender')" class="invalid-feedback">
+          Gênero é obrigatório.
+        </div>
+      </div>
+      <div class="form-group align-items-start">
+        <label>Porte:</label>
+        <select
+          formControlName="size"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('veterinaryCare') }"
+          required
+        >
+          <option value="" disabled selected>
+            Selecione o porte do animal
+          </option>
+          <option *ngFor="let option of sizeOptions" [value]="option">
+            {{ option }}
+          </option>
+        </select>
+        <div *ngIf="isFieldInvalid('size')" class="invalid-feedback">
+          Porte é obrigatório.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group align-items-start">
+      <label>Temperamento:</label>
+      <select
+        formControlName="temperament"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': isFieldInvalid('temperament') }"
+        required
+      >
+        <option value="" disabled selected>Selecione o temperamento</option>
+        <option *ngFor="let option of temperamentOptions" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+      <div *ngIf="isFieldInvalid('temperament')" class="invalid-feedback">
+        Seleção de temperamento é obrigatória.
+      </div>
+    </div>
+
+    <div class="form-group align-items-start">
+      <label>Vive bem com:</label>
+      <select
+        formControlName="liveWellWith"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': isFieldInvalid('liveWellWith') }"
+        required
+      >
+        <option value="" disabled selected>Selecione com quem vive bem</option>
+        <option *ngFor="let option of liveWellWithOptions" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+      <div *ngIf="isFieldInvalid('liveWellWith')" class="invalid-feedback">
+        Seleção de companhia é obrigatória.
+      </div>
+    </div>
+
+    <div class="form-group align-items-start">
+      <label>Sociabilidade (Como se comporta?):</label>
+      <select
+        formControlName="sociability"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': isFieldInvalid('sociability') }"
+        required
+      >
+        <option value="" disabled selected>Selecione a sociabilidade</option>
+        <option *ngFor="let option of sociabilityOptions" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+      <div *ngIf="isFieldInvalid('sociability')" class="invalid-feedback">
+        Seleção de sociabilidade é obrigatória.
+      </div>
+    </div>
+
+    <div class="form-group align-items-start">
+      <label>Adicione uma foto do pet:</label>
+      <input
+        type="file"
+        class="form-control"
+        (change)="onFileSelected($event)"
+      />
+    </div>
+
+    <div
+      *ngIf="imagePreview"
+      class="image-preview d-flex flex-column align-items-center gap-2"
+    >
+      <label>Prévia da imagem:</label>
+      <img
+        [src]="imagePreview"
+        alt="Prévia da imagem do pet"
+        class="img-thumbnail"
+      />
+    </div>
+
+    <div class="form-group align-items-start mt-4">
+      <button type="submit" class="btn-submit" (click)="onSubmit()">
+        Salvar
+      </button>
+    </div>
+  </div>
+</form>

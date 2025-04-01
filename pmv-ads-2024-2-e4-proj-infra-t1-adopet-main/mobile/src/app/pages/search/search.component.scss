@@ -1,0 +1,70 @@
+.container {
+  box-sizing: border-box;
+}
+
+.container__search {
+  width: 98%;
+  margin: 0 auto;
+}
+
+.animals-list {
+  max-height: 31.25rem;
+  overflow: auto;
+}
+
+.container__search {
+  width: 98%;
+  margin: 0 auto;
+}
+
+.search__title {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background: linear-gradient(45deg, #f6f6f6, #fff);
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+ion-item {
+  --background: #fff;
+  --border-radius: 0.25rem;
+}
+
+ion-button {
+  --border-radius: 0.25rem;
+}
+
+ion-input {
+  width: 100%;
+}
+
+/* Estilos para a barra de rolagem */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(136, 136, 136, 0.5);
+  border-radius: 0.75rem;
+  border: 2px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

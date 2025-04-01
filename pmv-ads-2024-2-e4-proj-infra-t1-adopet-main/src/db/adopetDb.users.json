@@ -1,0 +1,211 @@
+[{
+  "_id": "1abef847-24b7-46bd-9ea6-695c140ceabb",
+  "UserName": "Vitor",
+  "NormalizedUserName": "VITOR",
+  "Email": "vitor_oliveira@jabil.com",
+  "NormalizedEmail": "VITOR_OLIVEIRA@JABIL.COM",
+  "EmailConfirmed": false,
+  "PasswordHash": "AQAAAAEAACcQAAAAELfP+/xgnSI+Z4CJ90HWsVXI1jWX4W9GsodePtAXkVqAaa4hkMi9A5+OfW/gllSDhA==",
+  "SecurityStamp": "G3PFDMEV5U226PKHMPG72Q2RL5RNF4CC",
+  "ConcurrencyStamp": "82115401-85ef-4c7d-aca8-bd6da1859f96",
+  "PhoneNumber": null,
+  "PhoneNumberConfirmed": false,
+  "TwoFactorEnabled": false,
+  "LockoutEnd": null,
+  "LockoutEnabled": true,
+  "AccessFailedCount": 0,
+  "Version": 1,
+  "CreatedOn": "2024-09-28T02:55:03.682826Z",
+  "Claims": [],
+  "Roles": [
+    "310622f0-45e5-4496-8b3b-c37c2095dccd"
+  ],
+  "Logins": [],
+  "Tokens": [],
+  "surname": "Oliveira",
+  "contact": {
+    "$numberLong": "31929382938"
+  },
+  "about": "Sobre endereço",
+  "updatedAt": null,
+  "address": {
+    "createdAt": {
+      "$date": "2024-09-28T02:55:03.685Z"
+    },
+    "updatedAt": null,
+    "city": "Contagem",
+    "state": "Minas Gerais",
+    "about": null
+  }
+},
+{
+  "_id": "811f754d-e6a8-4ad6-bb42-ebef61cb822d",
+  "UserName": "Admin",
+  "NormalizedUserName": "ADMIN",
+  "Email": "admin@admin.com",
+  "NormalizedEmail": "ADMIN@ADMIN.COM",
+  "EmailConfirmed": false,
+  "PasswordHash": "AQAAAAEAACcQAAAAEPgPjjrQ1hTloEDGWLfBqHMGCnByjIMO9fdxb/yliRWfC87jN8E5FPPgzrV2Ldrzvw==",
+  "SecurityStamp": "UB4TO4SRSIKUUHJFPIM6FFOSDMJL3Q5C",
+  "ConcurrencyStamp": "60cdcd06-317e-416d-b25e-ed97ef61f62b",
+  "PhoneNumber": null,
+  "PhoneNumberConfirmed": false,
+  "TwoFactorEnabled": false,
+  "LockoutEnd": null,
+  "LockoutEnabled": true,
+  "AccessFailedCount": 0,
+  "Version": 1,
+  "CreatedOn": "2024-09-28T12:41:23.2154449Z",
+  "Claims": [],
+  "Roles": [
+    "310622f0-45e5-4496-8b3b-c37c2095dccd"
+  ],
+  "Logins": [],
+  "Tokens": [],
+  "surname": "User",
+  "contact": {
+    "$numberLong": "31949383940"
+  },
+  "about": "User admin",
+  "updatedAt": null,
+  "address": {
+    "createdAt": {
+      "$date": "2024-09-28T12:41:23.215Z"
+    },
+    "updatedAt": null,
+    "city": "Contagem",
+    "state": "Minas Gerais",
+    "about": null
+  }
+},
+{
+  "_id": "901a655a-5f0b-44fb-bf72-bef173088552",
+  "UserName": "Vitor Dev",
+  "NormalizedUserName": "D2C4E1C6-72AA-4DDC-83F8-E7A831A069BE",
+  "Email": "vitor_admin@teste.com",
+  "NormalizedEmail": "VITOR_ADMIN@TESTE.COM",
+  "EmailConfirmed": false,
+  "PasswordHash": "AQAAAAEAACcQAAAAEGnPQlA11m3PITeyuyzLvj55uVnvTwJ5L7QaUdDQQoWDr3tYmRvKm6FL6A4v6eI+XA==",
+  "SecurityStamp": "QIZ3OPRPT5JCDGY33P4JVRDMLTF7DPMB",
+  "ConcurrencyStamp": "1bed1b0b-a8e2-49e6-b619-bc9db55f999b",
+  "PhoneNumber": null,
+  "PhoneNumberConfirmed": false,
+  "TwoFactorEnabled": false,
+  "LockoutEnd": null,
+  "LockoutEnabled": true,
+  "AccessFailedCount": 0,
+  "Version": 1,
+  "CreatedOn": "2024-10-04T03:15:06.6082908Z",
+  "Claims": [],
+  "Roles": [
+    "310622f0-45e5-4496-8b3b-c37c2095dccd"
+  ],
+  "Logins": [],
+  "Tokens": [],
+  "name": "Vitor",
+  "surname": "Admin",
+  "contact": {
+    "$numberLong": "31920394857"
+  },
+  "about": "Dev Jr",
+  "updatedAt": {
+    "$date": "2024-10-04T03:16:18.014Z"
+  },
+  "address": {
+    "createdAt": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "updatedAt": null,
+    "city": "Contagem 2",
+    "state": "MG",
+    "about": "Cidade"
+  }
+},
+{
+  "_id": "68fb5b21-14eb-462b-87d3-6223898f5cc8",
+  "UserName": "91fdb8d7-f98b-4cff-9e91-f7f4828cbe1c",
+  "NormalizedUserName": "91FDB8D7-F98B-4CFF-9E91-F7F4828CBE1C",
+  "Email": "sandros.maciel@gmail.com",
+  "NormalizedEmail": "SANDROS.MACIEL@GMAIL.COM",
+  "EmailConfirmed": false,
+  "PasswordHash": "AQAAAAEAACcQAAAAEAr0GMsvbOD6Yf9g1GiBKzcfcA9pkuVzivgAd4P15HwHA+5QNVnccf5W8w15f9E9WQ==",
+  "SecurityStamp": "UZ7IF4PACPN727RXM3VN25UAQWP7T43R",
+  "ConcurrencyStamp": "7758203a-1400-4532-9189-15efea113ce5",
+  "PhoneNumber": null,
+  "PhoneNumberConfirmed": false,
+  "TwoFactorEnabled": false,
+  "LockoutEnd": null,
+  "LockoutEnabled": true,
+  "AccessFailedCount": 0,
+  "Version": 1,
+  "CreatedOn": "2024-10-04T21:01:43.2580879Z",
+  "Claims": [],
+  "Roles": [
+    "310622f0-45e5-4496-8b3b-c37c2095dccd"
+  ],
+  "Logins": [],
+  "Tokens": [],
+  "name": "Sandro",
+  "surname": "Maciel",
+  "contact": {
+    "$numberLong": "31973176478"
+  },
+  "about": "teste",
+  "updatedAt": null,
+  "address": {
+    "createdAt": {
+      "$date": "2024-10-04T21:01:43.260Z"
+    },
+    "updatedAt": null,
+    "city": "BH",
+    "state": "MG",
+    "about": null
+  }
+},
+{
+  "_id": "088758a7-4d19-4518-aadf-42e04ef1523b",
+  "UserName": "a9af6424-d3a9-4199-b2ae-d9bdba320399",
+  "NormalizedUserName": "A9AF6424-D3A9-4199-B2AE-D9BDBA320399",
+  "Email": "usuario@teste.com",
+  "NormalizedEmail": "USUARIO@TESTE.COM",
+  "EmailConfirmed": false,
+  "PasswordHash": "AQAAAAEAACcQAAAAEGLeeNtqcPdti6K433civfW1WJtsTmir/ZEfVsO9V4vGfTIKbLPez1hRx16Dbnet+g==",
+  "SecurityStamp": "NPWQXKCAAAUENF4TSPZYCOAUIEVIC6DU",
+  "ConcurrencyStamp": "09165e9c-a1bc-4dfc-b779-959b73456989",
+  "PhoneNumber": null,
+  "PhoneNumberConfirmed": false,
+  "TwoFactorEnabled": false,
+  "LockoutEnd": null,
+  "LockoutEnabled": true,
+  "AccessFailedCount": 0,
+  "Version": 1,
+  "CreatedOn": "2024-10-05T13:45:09.2097462Z",
+  "Claims": [],
+  "Roles": [
+    "310622f0-45e5-4496-8b3b-c37c2095dccd"
+  ],
+  "Logins": [],
+  "Tokens": [],
+  "name": "Usuario Teste editado",
+  "surname": "Sobrenome",
+  "contact": {
+    "$numberLong": "31940594837"
+  },
+  "about": "Desenvolvedor teste",
+  "updatedAt": {
+    "$date": "2024-10-05T13:56:14.659Z"
+  },
+  "address": {
+    "createdAt": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "updatedAt": null,
+    "city": "Contagem",
+    "state": "Minas Gerais",
+    "about": "endereço residencial"
+  }
+}]

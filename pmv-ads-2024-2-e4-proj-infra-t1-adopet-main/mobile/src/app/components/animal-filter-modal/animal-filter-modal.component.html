@@ -1,0 +1,51 @@
+<div class="container modal__wrapper p-3">
+  <div class="modal__header">
+    <h5 class="modal__title text-center">Pesquisar por:</h5>
+    <button class="close-button" (click)="onCancel()">&times;</button>
+  </div>
+
+  <form [formGroup]="form" class="p-2">
+    <div class="form-container__content d-flex gap-3 flex-column">
+      <div class="form-group">
+        <label>Idade</label>
+        <input
+          formControlName="Age"
+          type="number"
+          class="form-control"
+          placeholder="Digite o nome ou apelido do pet"
+        />
+      </div>
+      <div class="form-group">
+        <label>Cidade</label>
+        <input
+          formControlName="City"
+          class="form-control"
+          placeholder="Digite a cidade onde procura o pet"
+        />
+      </div>
+      <div class="form-group">
+        <label>Estado</label>
+        <input
+          formControlName="State"
+          type="text"
+          class="form-control"
+          placeholder="Digite o estado do pet"
+        />
+      </div>
+      <div class="form-group">
+        <label>Espécie</label>
+        <input
+          formControlName="Specie"
+          type="text"
+          class="form-control"
+          placeholder="Digite a espécie do pet"
+        />
+      </div>
+      <div class="form-group mt-4">
+        <button class="btn btn-secondary w-100" (click)="onSubmit()">
+          Filtrar
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

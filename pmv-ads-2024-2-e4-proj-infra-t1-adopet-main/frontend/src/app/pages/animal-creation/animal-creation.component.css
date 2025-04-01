@@ -1,0 +1,13 @@
+.container-fluid {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-image: url("https://caringhandsvet.com/wp-content/uploads/2019/06/wellness_care_bg-img01.jpg");
+}
+
+.container {
+  max-width: 50rem;
+}

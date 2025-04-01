@@ -1,0 +1,16 @@
+[{
+  "_id": "310622f0-45e5-4496-8b3b-c37c2095dccd",
+  "Name": "USER",
+  "NormalizedName": "USER",
+  "ConcurrencyStamp": "e41b2d42-4928-47e7-b8e5-19cca8749656",
+  "Version": 1,
+  "Claims": []
+},
+{
+  "_id": "77755843-a38d-4b6b-b140-840306dbfa39",
+  "Name": "teste 1",
+  "NormalizedName": "TESTE 1",
+  "ConcurrencyStamp": "2c2143f3-800a-45db-b88e-3a0078fc2762",
+  "Version": 1,
+  "Claims": []
+}]

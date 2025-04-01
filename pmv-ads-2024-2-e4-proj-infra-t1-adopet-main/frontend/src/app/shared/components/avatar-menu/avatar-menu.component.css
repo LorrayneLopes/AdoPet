@@ -1,0 +1,10 @@
+.avatar-menu {
+  position: relative;
+  display: inline-block;
+}
+
+::ng-deep .ant-menu-title-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

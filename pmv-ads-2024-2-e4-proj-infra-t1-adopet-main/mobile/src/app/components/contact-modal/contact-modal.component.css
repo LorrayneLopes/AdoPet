@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+.modal-wrapper {
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.align-right {
+  float: right;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.header {
+  color: var(--secondary-color);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.tutor {
+  color: var(--secondary-color);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.contact {
+  font-size: 18px;
+  font-weight: 400;
+}

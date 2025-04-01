@@ -1,0 +1,18 @@
+.animals__list {
+  display: grid;
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .animals__list {
+    grid-template-columns: 1fr;
+    overflow-x: auto;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .animals__list li {
+    flex: 0 0 auto;
+  }
+}

@@ -1,0 +1,39 @@
+<header
+  class="container-fluid d-flex align-items-center justify-content-between"
+>
+  <div class="logo">
+    <a routerLink="/home">
+      <img src="assets/images/logo.png" alt="Logo" />
+    </a>
+  </div>
+  <ng-container *ngIf="!isLoggedIn; else loggedTemplate">
+    <nav>
+      <ul class="d-flex gap-3 list-unstyled m-0">
+        <li>
+          <button
+            class="btn btn-ghost text-white"
+            routerLink="/login"
+            routerLinkActive="active"
+          >
+            Entrar
+          </button>
+        </li>
+        <li>
+          <button
+            class="btn btn-ghost text-white"
+            routerLink="/signup"
+            routerLinkActive="active"
+          >
+            Cadastre-se
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </ng-container>
+
+  <ng-template #loggedTemplate>
+    <nav>
+      <app-avatar-menu></app-avatar-menu>
+    </nav>
+  </ng-template>
+</header>

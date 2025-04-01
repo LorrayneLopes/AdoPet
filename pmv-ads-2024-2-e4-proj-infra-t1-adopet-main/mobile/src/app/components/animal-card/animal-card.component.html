@@ -1,0 +1,43 @@
+<div class="card">
+  <ng-container
+    *ngIf="!(isLoading | async) && hasAnimalData; else loaderTemplate"
+  >
+    <div
+      class="card__header"
+      [ngStyle]="{
+        'background-image': 'url(' + getImageUrl(animal.image) + ')'
+      }"
+    ></div>
+    <div class="card__body d-flex flex-column align-items-center">
+      <h5 class="body__title">{{ animal.name }}</h5>
+      <div class="body__content d-flex flex-column gap-2 align-items-center">
+        <span class="content__gender">
+          {{ animal.gender }} - {{ animal.age }}
+        </span>
+        <span class="content__address">
+          {{ animal.address.city }} - {{ animal.address.state }}
+        </span>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<ng-template #loaderTemplate>
+  <nz-skeleton-element
+    [nzActive]="true"
+    nzType="image"
+    [style]="{
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+      padding: '1rem 0.5rem',
+      'min-width': '12.5rem'
+    }"
+  ></nz-skeleton-element>
+
+  <nz-skeleton
+    [nzActive]="true"
+    [nzParagraph]="{ rows: 4 }"
+    [style]="{ padding: '1rem', textAlign: 'center' }"
+  ></nz-skeleton>
+</ng-template>

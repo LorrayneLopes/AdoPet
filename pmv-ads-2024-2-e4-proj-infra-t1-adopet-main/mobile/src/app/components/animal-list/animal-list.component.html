@@ -1,0 +1,14 @@
+<ul
+  class="animals__list list-unstyled"
+  [ngStyle]="{
+    'grid-template-columns':
+      'repeat(auto-fill, minmax(' + gridSize.min + ', ' + gridSize.max + '))'
+  }"
+>
+  <li
+    *ngFor="let animal of animals"
+    (click)="redirectToAnimalDetails(animal.id)"
+  >
+    <app-animal-card [animal]="animal"></app-animal-card>
+  </li>
+</ul>

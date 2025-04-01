@@ -1,0 +1,92 @@
+<div class="home container-fluid p-0">
+  <div class="row banner mt-5 mb-5 m-auto">
+    <div class="col-12 p-0 banner__image">
+      <h1 class="banner__text">Encontre seu novo amigo hoje mesmo!</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row col-12 justify-content-center gap-2 m-auto">
+      <div class="col-md-4">
+        <button
+          class="btn btn-secondary w-100 rounded"
+          (click)="redirectToAnimals()"
+        >
+          Quero adotar
+        </button>
+      </div>
+
+      <div class="col-md-4">
+        <button
+          class="btn btn-ghost btn-block w-100 rounded"
+          (click)="redirectToAnimalCreation()"
+        >
+          Quero divulgar um animal
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <h4 class="home__title ms-3">Recém cadastrados para adoção</h4>
+    <p class="home__subtitle ms-3">
+      Nosso site está cheio de animaizinhos ansiosos por uma família. Vem ver!
+    </p>
+    <div class="row col-12 justify-content-center gap-2 m-auto mt-4">
+      <app-animal-list [animals]="animals()"></app-animal-list>
+    </div>
+
+    <div class="row col-12 justify-content-center gap-2 m-auto mt-4">
+      <button
+        class="btn btn-ghost btn-block w-100 rounded btn-sm p-2"
+        (click)="redirectToAnimals()"
+      >
+        Ver todos
+      </button>
+    </div>
+  </div>
+
+  <div class="container mt-4 mb-4">
+    <h5 class="home__title font-weight-bold ms-3">Por que adotar?</h5>
+    <div class="row col-12 justify-content-center gap-3 m-auto mt-4">
+      <div class="col-md-4 col-sm-12 adoption-card d-flex align-items-center">
+        <img
+          src="assets/images/adopt-hug.png"
+          alt="Imagem 1"
+          class="adoption-card__image flex-1"
+        />
+        <p>
+          <strong>Nesse exato momento,</strong> existem milhares de doguinhos e
+          gatinhos esperando um humano para chamar de seu.
+        </p>
+      </div>
+      <div class="col-md-4 col-sm-12 adoption-card d-flex align-items-center">
+        <img
+          src="assets/images/adopt-cat.png"
+          alt="Imagem 1"
+          class="adoption-card__image flex-1"
+        />
+        <p>
+          <strong>E não há recompensa maior</strong> do que vê-los se tornando
+          aquela coisinha alegre e saudável depois de uma boa dose de cuidado e
+          carinho.
+        </p>
+      </div>
+      <div class="col-md-4 col-sm-12 adoption-card d-flex align-items-center">
+        <img
+          src="assets/images/adopt-dog.png"
+          alt="Imagem 1"
+          class="adoption-card__image flex-1"
+        />
+        <p>
+          <strong>Pensando bem, a pergunta é outra:</strong> se você pode mudar
+          o destino de um animal de rua, por que não faria isso?
+        </p>
+      </div>
+    </div>
+    <div class="button-final text-center mt-4">
+      <button class="btn btn-secondary rounded" (click)="redirectToAnimals()">
+        Encontrar meu novo amigo
+      </button>
+    </div>
+  </div>
+</div>

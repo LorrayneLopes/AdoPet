@@ -1,0 +1,29 @@
+<div class="modal-content" [ngStyle]="{ 'border-color': primaryColor }">
+  <button
+    class="close-button"
+    [ngStyle]="{ backgroundColor: primaryColor }"
+    (click)="onCancel()"
+  >
+    &times;
+  </button>
+  <h2 class="" [ngStyle]="{ color: primaryColor }">
+    {{ config.title }}
+  </h2>
+  <p class="mb-5">{{ config.message }}</p>
+  <div class="modal-buttons">
+    <button
+      class="cancel-button"
+      [ngStyle]="{ color: primaryColor, 'border-color': primaryColor }"
+      (click)="onCancel()"
+    >
+      Cancelar
+    </button>
+    <button
+      class="confirm-button"
+      [ngStyle]="{ 'background-color': primaryColor }"
+      (click)="onConfirm()"
+    >
+      Confirmar
+    </button>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+<div class="container p-2">
+  <div class="card animal-card mt-4" *ngIf="animal">
+    <div class="animal-card__section animal-card__section-images">
+      <div
+        class="animal-card__section--image rounded w-100"
+        [ngStyle]="{
+          'background-image': 'url(' + getImageUrl(animal.image) + ')'
+        }"
+      ></div>
+
+      <!-- <ul class="d-flex list-unstyled mt-2 gap-3">
+        <li
+          class="animal-card__section--sub-image rounded w-100"
+          [ngStyle]="{
+            'background-image': 'url(assets/images/animal-placeholder.jpg)'
+          }"
+        ></li>
+        <li
+          class="animal-card__section--sub-image rounded w-100"
+          [ngStyle]="{
+            'background-image': 'url(assets/images/animal-placeholder.jpg)'
+          }"
+        ></li>
+        <li
+          class="animal-card__section--sub-image rounded w-100"
+          [ngStyle]="{
+            'background-image': 'url(assets/images/animal-placeholder.jpg)'
+          }"
+        ></li>
+      </ul> -->
+    </div>
+
+    <div class="animal-card__content w-100 p-5">
+      <div class="animal-card__section">
+        <h1 class="animal-card__title text-center">{{ animal.name }}</h1>
+        <h6 class="animal-card__resume text-center">
+          {{ getAnimalResume() }}
+        </h6>
+      </div>
+      <div
+        class="animal-card__section animal-card__section--details d-flex flex-column gap-1 align-items-center mt-5"
+      >
+        <h2 class="animal-card__subtitle m-0">Detalhes</h2>
+        <app-badges-list [badges]="getAnimalBadges()"></app-badges-list>
+      </div>
+      <div
+        class="animal-card__section animal-card__section--info d-flex flex-column gap-2 mt-5"
+      >
+        <div class="animal-card__location d-flex gap-2 align-items-center">
+          <span>
+            <img src="assets/icons/pin.png" width="20" height="26.6" />
+          </span>
+          <p class="animal-card__location-text m-0">
+            {{ getAnimalAdress() }}
+          </p>
+        </div>
+        <div class="animal-card__tutor d-flex gap-2 align-items-center">
+          <span>
+            <img src="assets/icons/person.png" width="20" height="20" />
+          </span>
+          <p class="animal-card__tutor-text m-0">Tutor: Matheus Rocha</p>
+        </div>
+        <button
+          class="animal-card__contact-btn btn btn-secondary mt-5 align-self-center w-100 rounded"
+          (click)="handleClick()"
+        >
+          Entrar em contato
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="more-animals mt-5 d-flex flex-column gap-3" *ngIf="animal">
+    <h5 class="more-animals__title">Outros animais para adoção</h5>
+
+    <app-animal-list [animals]="animalsSignal()"></app-animal-list>
+  </div>
+</div>

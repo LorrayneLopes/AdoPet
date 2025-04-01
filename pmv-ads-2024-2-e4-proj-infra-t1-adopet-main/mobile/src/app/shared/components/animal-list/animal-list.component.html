@@ -1,0 +1,10 @@
+<ion-grid>
+  <ion-row class="animals__list">
+    <ion-col
+      *ngFor="let animal of animals"
+      (click)="redirectToAnimalDetails(animal.id)"
+    >
+      <app-animal-card [animal]="animal"></app-animal-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>

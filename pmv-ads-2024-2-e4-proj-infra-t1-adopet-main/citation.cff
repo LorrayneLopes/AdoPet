@@ -1,0 +1,26 @@
+message: Sistema de adoção de pets
+title: Adopet
+authors:
+  - family-names: Cristine Lopes Pereira
+    given-names: Lorrayne
+  - family-names: Faria Verri
+    given-names: Lucas
+  - family-names: Almeida da Rocha
+    given-names: Matheus
+  - family-names: Savio Maciel
+    given-names: Sandro
+  - family-names: Costa Oliveira Silva
+    given-names: Vitor
+  - family-names: Clara de Oliveira Ferreira
+    given-names: Ana
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Augusto Lara Soares
+    given-names: Felipe
+
+keywords:
+  - Pet
+  - Adoção
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e4-proj-infra-t1-adopet.git
+version: 1.0.0
+date-released: 2024-12-01

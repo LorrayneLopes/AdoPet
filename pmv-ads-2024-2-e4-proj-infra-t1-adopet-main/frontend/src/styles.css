@@ -1,0 +1,118 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~ng-zorro-antd/ng-zorro-antd.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+@font-face {
+  font-family: "Patua One";
+  src: url("assets/fonts/Patua_One/PatuaOne-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/Inter/static/Inter_18pt-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.body,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+div,
+input,
+button {
+  font-family: "Inter" !important;
+}
+
+:root {
+  --primary-color: #00ccf9;
+  --secondary-color: #1874a7;
+  --danger-color: #ff0000;
+
+  --bg-gray: #f6f6f6;
+
+  --font-family-inter: "Inter", sans-serif;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --font-size-small: 12px;
+  --font-size-base: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 20px;
+  --font-size-xlarge: 24px;
+  --font-size-xxlarge: 32px;
+}
+
+.form-control {
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.btn {
+  border: none !important;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-0.05rem);
+  transition: all 0.1s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  color: #ffffff;
+
+  &:hover {
+    background-color: var(--secondary-color);
+  }
+
+  &.active {
+    background-color: var(--secondary-color) !important;
+  }
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color) !important;
+  color: #ffffff;
+}
+
+.btn-ghost {
+  background-color: transparent !important;
+  color: var(--secondary-color);
+
+  &:hover {
+    color: var(--secondary-color);
+  }
+}
+
+.add-edit-animal-modal {
+  width: auto;
+  max-width: 40rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.confirm-modal {
+  width: 100%;
+  max-width: 28.5rem;
+}
+
+input:focus {
+  border-color: #dee2e6 !important;
+}
